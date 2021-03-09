@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/carousel.css">
+    <link rel="stylesheet" href="./styles/navigation.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <script src="./scripts/main.js" defer></script>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <img src="./images/logo.png">
+        </div>
+
+        <!-- only one of "nav-desktop" and "nav-mobile" will show on user interface -->
+        <div class="nav-desktop">
+            <a href="#about">about us</a>
+            <a href="#service">our services</a>
+            <a href="#gallery">gallery</a>
+            <a href="#contact">contact us</a>
+            <a href="#licensing">licensing</a>
+        </div>
+        <div class="nav-mobile" id="nav-mobile" onclick="toggleButtonAndMenu()">
+            <!-- The empty divs inside nav-menu-button are used for creating animation effects. -->
+            <button class="nav-mobile-button">
+                <div id="nav-mobile-button-div1"></div>
+                <div id="nav-mobile-button-div2"></div>
+                <div id="nav-mobile-button-div3"></div>
+                <div id="nav-mobile-button-div4"></div>
+            </button>
+            <ul class="nav-mobile-list nav-mobile-list-hidden" id="nav-mobile-list">
+                <li><a href="#about">about us</a></li>
+                <li><a href="#service">our service</a></li>
+                <li><a href="#gallery">gallery</a></li>
+                <li><a href="#contact">contact us</a></li>
+                <li><a href="#licensing">licensing</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="carousel" aria-label="Gallery">
+        <ol class="carousel__viewport">
+            <li id="carousel__slide1" tabindex="0" class="carousel__slide">
+                <div class="carousel__snapper">
+                    <a href="#carousel__slide3" class="carousel__prev">Go to last slide</a>
+                    <span class="carousel__slogan">grab a coffee</span>
+                    <a href="#carousel__slide2" class="carousel__next">Go to next slide</a>
+                </div>
+            </li>
+            <li id="carousel__slide2" tabindex="0" class="carousel__slide">
+                <div class="carousel__snapper"></div>
+                <a href="#carousel__slide1" class="carousel__prev">Go to previous slide</a>
+                <span class="carousel__slogan">watch them play</span>
+                <a href="#carousel__slide3" class="carousel__next">Go to next slide</a>
+            </li>
+            <li id="carousel__slide3" tabindex="0" class="carousel__slide">
+                <div class="carousel__snapper"></div>
+                <a href="#carousel__slide2" class="carousel__prev">Go to previous slide</a>
+                <span class="carousel__slogan">and enjoy</span>
+                <a href="#carousel__slide1" class="carousel__next">Go to first slide</a>
+            </li>
+        </ol>
+        <aside class="carousel__navigation">
+            <ol class="carousel__navigation-list">
+                <li class="carousel__navigation-item">
+                    <a href="#carousel__slide1" class="carousel__navigation-button">Go to slide 1</a>
+                </li>
+                <li class="carousel__navigation-item">
+                    <a href="#carousel__slide2" class="carousel__navigation-button">Go to slide 2</a>
+                </li>
+                <li class="carousel__navigation-item">
+                    <a href="#carousel__slide3" class="carousel__navigation-button">Go to slide 3</a>
+                </li>
+            </ol>
+        </aside>
+    </section>
+    <main>
+        <section>
+            <h1>Enjoy the Day at Cafe O' Play</h1>
+            <span>Plan your next playdate at Cafe O’Play and sit, sip and watch them make new friends and explore all of
+                the fun the play area has to offer!</span>
+        </section>
+
+        <section id="cards">
+            <div class="card">
+                <img src="./images/3.jpg" alt="a little girl smiling while playing at Cafe O' Play">
+                <div class="card__text">
+                    <h2>Relax & Enjoy</h2>
+                    <p>Sit, sip and watch them play at Edmonton’s original indoor playground for little kids, Café
+                        O'Play.<br><br>Café O’Play combines the best of a traditional coffee shop with an indoor
+                        playground designed
+                        for children under 6. Think Starbucks, with a kids menu and play area.
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./images/9.jpg" alt="planty of toys neatly placed in the play area of Cafe O' Play">
+                <div class="card__text">
+                    <h2>Play the Day Away</h2>
+                    <p>In the Indoor Playground, children have access to a safe, secure and clean environment that
+                        includes 1,000 square feet of play area. The cafe even has an enclosure for babies with baby
+                        toys to keep the babies in, and the bigger kids out.
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./images/8.jpg" alt="the scrupulously tidy kitchen of Cafe O' Play">
+                <div class="card__text">
+                    <h2>Snacks & More</h2>
+                    <p>Serving the best breakfast sandwiches and paninis in Edmonton, as well as a variety of snacks and
+                        finger foods, and only the freshest brewed coffee - Cafe O’Play is a great place to spend your
+                        morning, afternoon, or early evening.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <a href="./pages/licensing.html">licensing</a>
+        <a href="">contact</a>
+    </footer>
+</body>
+
+</html>
