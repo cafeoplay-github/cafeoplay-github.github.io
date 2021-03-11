@@ -7,45 +7,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cafe O' Play - Contact Us</title>
     <link rel="stylesheet" href="../styles/pages.css">
+    <link rel="stylesheet" href="../styles/navigation.css">
+    <link rel="stylesheet" href="../styles/footer.css">
     <!-- Social media icon external library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="../scripts/main.js" defer></script>
 </head>
 
 <body>
-    <h1>contact us</h1>
-    <section class="introductions">
-        <h2>business hours</h2><br>
-        <span>We are closed due to COVID-19</span>
-    </section>
-    <section class="introductions">
-        <h2>contact us</h2>
-        <div>
-            <span>Phone:</span>
-            <a href="tel:+1-780-758-7529">+1 780-758-PLAY (7529)</a>
+    <nav>
+        <div class="logo">
+            <img src="../images/logo.png">
         </div>
-        <span>Fax: 780-758-7528</span>
-        <div>
-            <span>Email:</span>
-            <a href="mailto:riverbend@cafeoplay.ca">riverbend@cafeoplay.ca</a>
+        <div class="nav-mobile" id="nav-mobile" onclick="toggleButtonAndMenu()">
+            <!-- The empty divs inside nav-menu-button are used for creating animation effects. -->
+            <button class="nav-mobile-button">
+                <div id="nav-mobile-button-div1"></div>
+                <div id="nav-mobile-button-div2"></div>
+                <div id="nav-mobile-button-div3"></div>
+                <div id="nav-mobile-button-div4"></div>
+            </button>
+            <ul class="nav-mobile-list nav-mobile-list-hidden" id="nav-mobile-list">
+                <li><a href="../index.html" target="_blank" rel="noopener">home</a></li>
+                <li><a href="../index.html#cards" target="_blank" rel="noopener">gallery</a></li>
+                <li><a href="./contact.html" class="active-page">contact us</a></li>
+                <li><a href="./licensing.html">licensing</a></li>
+            </ul>
         </div>
-    </section>
-    <section class="introductions">
-        <h2>follow us</h2>
-        <a href="https://www.facebook.com/cafeoplayeg" class="fa fa-facebook"></a>
-        <span>Facebook</span>
-        <a href="https://www.instagram.com/cafeoplay/" class="fa fa-instagram"></a>
-        <span>Instagram</span>
-    </section>
-    <section class="contact">
-        <h2>send us a message</h2>
-        <form action="mailto:Lucifer.k9@hotmail.com" method="post" id="contact__form">
-            <input type="text" name="name" id="name" placeholder="Name">
-            <input type="email" name="email" id="name" placeholder="Email">
-            <input type="number" name="phone number" id="name" placeholder="Phone Number">
-            <textarea name="message" id="name" placeholder="Message"></textarea>
-            <input type="submit" value="SEND">
-        </form>
-    </section>
+    </nav>
+    <main>
+        <h1>contact us</h1>
+        <section class="introductions">
+            <h2>business hours</h2><br>
+            <span>We are closed due to COVID-19.</span>
+        </section>
+        <section class="introductions" id="contact-us">
+            <h2>contact us</h2>
+            <div>
+                <span>Phone:</span>
+                <a href="tel:+1-780-758-7529">+1 780-758-PLAY (7529)</a>
+            </div>
+            <div>
+                <span>Fax: 780-758-7528</span>
+            </div>
+            <div>
+                <span>Email:</span>
+                <a href="mailto:riverbend@cafeoplay.ca">riverbend@cafeoplay.ca</a>
+            </div>
+        </section>
+        <section class="introductions">
+            <h2>follow us</h2>
+            <a href="https://www.facebook.com/cafeoplayeg" class="fa fa-facebook"></a>
+            <span>Facebook</span>
+            <a href="https://www.instagram.com/cafeoplay/" class="fa fa-instagram"></a>
+            <span>Instagram</span>
+        </section>
+        <section class="contact">
+            <h2>send us a message</h2>
+            <form action="mailto:Lucifer.k9@hotmail.com" method="post" id="contact__form">
+                <input type="text" name="name" id="name" placeholder="Name">
+                <input type="email" name="email" id="name" placeholder="Email">
+                <input type="number" name="phone number" id="name" placeholder="Phone Number">
+                <textarea name="message" id="name" placeholder="Message"></textarea>
+                <input type="submit" value="SEND">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div id="footer__links">
+            <a href="../index.html#cards" target="_blank" rel="noopener">gallery</a>
+            <a href="./licensing.html" target="_blank" rel="noopener">licensing</a>
+            <a href="#">contact</a>
+        </div>
+        <div id="footer__media">
+            <a href="https://www.facebook.com/cafeoplayeg" class="fa fa-facebook"></a>
+            <a href="https://www.instagram.com/cafeoplay/" class="fa fa-instagram"></a>
+        </div>
+        <span id="footer__copyright">Copyright © 2021, <a href="../index.html" target="_blank" rel="noopener">cafeoplay</a>.</span>
+    </footer>
 </body>
 
 </html>

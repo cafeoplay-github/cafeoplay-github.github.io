@@ -1,0 +1,136 @@
+html,
+body {
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+html {
+    scroll-padding-top: 7rem;
+}
+
+#about {
+    position: relative;
+    margin: 5rem auto 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 70vw;
+}
+
+#about h1,
+#about span {
+    color: #4a4a4a;
+    font-family: sans-serif;
+    text-decoration: none solid #4a4a4a;
+}
+
+#about h1 {
+    font-size: 1.8rem;
+    text-align: center;
+    border: 1px solid black;
+}
+
+#about span {
+    font-weight: 300;
+}
+
+#about h1::before {
+    content: "";
+    height: 6px;
+    width: 90px;
+    background-color: lightblue;
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+}
+
+.card,
+.card__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.card__text {
+    flex-grow: 1;
+    min-width: 50vw;
+}
+
+.card h2,
+.card p {
+    color: #4a4a4a;
+    font-family: sans-serif;
+    text-decoration: none solid #4a4a4a;
+}
+
+.card__text h2 {
+    position: relative;
+    line-height: 36px;
+    font-size: 32px;
+    font-weight: 600;
+    margin: 70px 50px 20px;
+}
+
+.card__text h2::before {
+    content: "";
+    height: 6px;
+    width: 70px;
+    background-color: lightblue;
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.card__text p {
+    line-height: 25px;
+    font-weight: 400;
+    margin: 0 50px 50px;
+    text-align: center;
+}
+
+.card img {
+    flex-grow: 1;
+    width: 100vw;
+}
+
+@media only screen and (min-width: 900px) {
+    .card {
+        flex-direction: row;
+    }
+
+    .card:nth-of-type(2n) {
+        flex-direction: row-reverse;
+    }
+
+    .card img {
+        width: 50vw;
+    }
+
+    .card__text {
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .card__text h2::before {
+        left: unset;
+        transform: unset;
+    }
+
+    .card__text h2 {
+        margin-top: 20px;
+    }
+
+    .card__text p {
+        text-align: left;
+        margin-bottom: 0;
+    }
+}

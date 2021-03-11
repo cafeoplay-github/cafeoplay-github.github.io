@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css?family=Comic+Neue");
+
+main {
+    margin-top: 7rem;
+}
+
+nav {
+    position: fixed;
+    display: flex;
+    top: 0;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 10px 0;
+    background: #7FD2E6;
+    z-index: 99;
+    letter-spacing: 2px;
+    font-weight: bolder;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+nav a:hover {
+    opacity: 0.5;
+}
+
+nav .logo img {
+    width: 4.5rem;
+}
+
+.nav-mobile {
+    position: absolute;
+    left: 0;
+    width: 100vw;
+    background: white;
+}
+
+.nav-mobile a img {
+    width: 12rem;
+    margin-left: 1rem;
+}
+
+.nav-mobile-button {
+    position: absolute;
+    right: 1rem;
+    top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 3rem;
+    background: transparent;
+    border: 0;
+}
+
+.nav-mobile-button:focus {
+    outline: none;
+}
+
+.nav-mobile-button div {
+    position: absolute;
+    background: black;
+    width: 2rem;
+    height: 2px;
+    transform: translateY(-50%);
+}
+
+.nav-mobile-button-1and4-activated {
+    animation: disappear 0.1s forwards;
+}
+
+.nav-mobile-button-2-activated {
+    animation: rotateClockwise 0.2s forwards;
+}
+
+.nav-mobile-button-3-activated {
+    animation: rotateCounterClockwise 0.2s forwards;
+}
+
+.nav-mobile-button-1and4-deactivated {
+    animation: appear 0.1s forwards;
+}
+
+.nav-mobile-button-2-deactivated {
+    animation: undoRotateClockwise 0.2s forwards;
+}
+
+.nav-mobile-button-3-deactivated {
+    animation: undoRotateCounterClockwise 0.2s forwards;
+}
+
+.nav-mobile-button div:nth-of-type(1) {
+    top: 30%;
+}
+
+.nav-mobile-button div:nth-of-type(2) {
+    top: 50%;
+}
+
+.nav-mobile-button div:nth-of-type(3) {
+    top: 50%;
+}
+
+.nav-mobile-button div:nth-of-type(4) {
+    top: 70%;
+}
+
+.nav-mobile-list {
+    list-style: none;
+    position: absolute;
+    top: 4.5rem;
+    right: 0;
+    width: max-content;
+    height: 70vh;
+    background: rgba(255, 255, 255, 88%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 0 2rem;
+    transition: transform 0.2s ease;
+}
+
+.nav-mobile-list-shown {
+    transform: translateX(0%);
+}
+
+.nav-mobile-list-hidden {
+    transform: translateX(100%);
+}
+
+.nav-mobile-list li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #585a5e;
+    font-size: 1.5rem;
+    padding: 2px 4px;
+}
+/* Start: animation */
+
+@keyframes disappear {
+    0% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 0%;
+    }
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+@keyframes rotateClockwise {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@keyframes undoRotateClockwise {
+    0% {
+        transform: rotate(45deg);
+    }
+    100% {
+        transform: rotate(0deg);
+        transform: translateY(-50%);
+    }
+}
+
+@keyframes rotateCounterClockwise {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-45deg);
+    }
+}
+
+@keyframes undoRotateCounterClockwise {
+    0% {
+        transform: rotate(-45deg);
+    }
+    100% {
+        transform: rotate(0deg);
+        transform: translateY(-50%);
+    }
+}
+/* End: animation */
+
+/* This active-page class is given to the corresponding <a> in <nav> in each HTML file.
+The purpose of this is to create an "active" style for the links */
+
+nav .nav-mobile .active-page {
+    background-color: #faa373d7;
+    font-weight: 600;
+}
