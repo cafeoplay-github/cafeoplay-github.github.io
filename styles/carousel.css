@@ -75,14 +75,15 @@ li {
 
 .carousel {
     position: relative;
-    padding-top: 30rem;
-    margin: 7rem auto 30px;
+    padding-top: 25rem;
+    margin: 0rem auto 30px;
     filter: drop-shadow(0 0 10px #0003);
     perspective: 100px;
     max-width: 80rem;
 }
 
 .carousel__viewport {
+    height: 26rem;
     position: absolute;
     top: 0;
     right: 0;
@@ -95,17 +96,18 @@ li {
 }
 
 .carousel__slogan {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Avenir Next Rounded", sans-serif;
     text-overflow: clip;
     color: white;
     letter-spacing: 2px;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 550;
     text-transform: uppercase;
     position: absolute;
     right: 50%;
     transform: translateX(50%);
     bottom: 2.5rem;
+    text-shadow:0.3px 0 0 #000, 0 -0.3px 0 #000, 0 0.3px 0 #000, -0.3px 0 0 #000;
 }
 
 .carousel__slide {
@@ -115,21 +117,23 @@ li {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-color: rgba(192, 187, 187, 0.9);
-    background-blend-mode: multiply;
+    background-color: rgb(163, 163, 163);
+    background-blend-mode: overlay;
 }
 
 #carousel__slide1 {
-    content: "grab yourself a coffee";
     background-image: url("../images/6.jpg");
+    background-position: 0 100%;
 }
 
 #carousel__slide2 {
     background-image: url("../images/2.jpg");
+    background-position: 0 30%;
 }
 
 #carousel__slide3 {
     background-image: url("../images/1.jpg");
+    background-position: 0 20%;
 }
 
 .carousel__slide:before {
@@ -189,9 +193,9 @@ li {
 
 .carousel__navigation-button {
     display: inline-block;
-    width: 1.5rem;
-    height: 1.5rem;
-    background-color: rgba(143, 143, 143, 0.5);
+    width: 0.8rem;
+    height: 0.8rem;
+    background-color: rgba(143, 143, 143, 0.51);
     background-clip: content-box;
     border: 0.25rem solid transparent;
     border-radius: 50%;
@@ -238,12 +242,12 @@ li {
 
 /* left arrow button */
 .carousel::before {
-    content: "<";
+    content: "";
     font-size: 1.5rem;
 }
 
 /* right arrow button */
 .carousel::after {
-    content: ">";
+    content: "";
     font-size: 1.5rem;
 }

@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Comic+Neue");
 
 main {
-    margin-top: 7rem;
+    margin-top: 5.5rem;
 }
 
 nav {
@@ -14,7 +14,6 @@ nav {
     background: #7FD2E6;
     z-index: 99;
     letter-spacing: 2px;
-    font-weight: bolder;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
@@ -108,7 +107,7 @@ nav .logo img {
     list-style: none;
     position: absolute;
     top: 4.5rem;
-    right: 0;
+    right: -2rem;
     width: max-content;
     height: 70vh;
     background: rgba(255, 255, 255, 88%);
