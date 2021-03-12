@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Comic+Neue");
 
+/* This is to offset the height of this nav bar.*/
 main {
     margin-top: 5.5rem;
 }
@@ -14,7 +15,7 @@ nav {
     background: #7FD2E6;
     z-index: 99;
     letter-spacing: 2px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: sans-serif;
 }
 
 nav a:hover {
@@ -22,7 +23,7 @@ nav a:hover {
 }
 
 nav .logo img {
-    width: 4.5rem;
+    height: 65px;
 }
 
 .nav-mobile {
@@ -58,7 +59,7 @@ nav .logo img {
 .nav-mobile-button div {
     position: absolute;
     background: black;
-    width: 2rem;
+    width: 1.5rem;
     height: 2px;
     transform: translateY(-50%);
 }
@@ -88,7 +89,7 @@ nav .logo img {
 }
 
 .nav-mobile-button div:nth-of-type(1) {
-    top: 30%;
+    top: 35%;
 }
 
 .nav-mobile-button div:nth-of-type(2) {
@@ -100,23 +101,23 @@ nav .logo img {
 }
 
 .nav-mobile-button div:nth-of-type(4) {
-    top: 70%;
+    top: 65%;
 }
 
 .nav-mobile-list {
     list-style: none;
     position: absolute;
-    top: 4.5rem;
-    right: -2rem;
-    width: max-content;
-    height: 70vh;
-    background: rgba(255, 255, 255, 88%);
+    top: 62px;
+    right: 0rem;
+    width: 100vw;
+    height: calc(100vh - 65px);
+    background: rgba(255, 255, 255);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: flex-start;
+    align-items: center;
     padding: 0 2rem;
-    transition: transform 0.2s ease;
+    transition: transform 0.3s ease;
 }
 
 .nav-mobile-list-shown {
@@ -132,6 +133,7 @@ nav .logo img {
     text-transform: uppercase;
     color: #585a5e;
     font-size: 1.5rem;
+    letter-spacing: 3px;
     padding: 2px 4px;
 }
 /* Start: animation */
@@ -198,5 +200,4 @@ The purpose of this is to create an "active" style for the links */
 
 nav .nav-mobile .active-page {
     background-color: #faa373d7;
-    font-weight: 600;
 }

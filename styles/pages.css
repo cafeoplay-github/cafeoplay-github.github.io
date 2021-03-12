@@ -3,9 +3,14 @@ body {
     margin: 0;
 }
 
-h1 {
+main {
+    margin-bottom: 2rem;
+}
+
+main h1 {
     text-align: center;
     font-size: 35px;
+    margin-top: 8rem;
 }
 
 h1,
@@ -19,11 +24,13 @@ h2 {
 
 h2 {
     font-size: 25px;
-    margin: 0 2rem;
+    margin: 0 auto 1rem;
+    padding: 0 3rem;
 }
 
 p {
-    margin: 0 1rem;
+    font-family: sans-serif;
+    margin: 0 2rem;
 }
 
 .introductions:not(:last-of-type) {
@@ -34,17 +41,17 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: flex-start;
 }
 
-ul {
+main ul {
     position: relative;
-    margin: 0 20px 0 0;
+    margin: 0 0 0 20px;
 }
 
-li,
-span,
-a {
+main li,
+main span,
+main a {
     font-family: sans-serif;
     font-size: 16px;
     font-weight: 300;

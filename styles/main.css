@@ -23,11 +23,11 @@ html {
     color: #4a4a4a;
     font-family: sans-serif;
     text-decoration: none solid #4a4a4a;
+    text-align: center;
 }
 
 #about h1 {
     font-size: 1.8rem;
-    text-align: center;
 }
 
 #about span {

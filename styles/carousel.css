@@ -98,6 +98,7 @@ li {
 .carousel__slogan {
     font-family: "Avenir Next Rounded", sans-serif;
     text-overflow: clip;
+    text-align: center;
     color: white;
     letter-spacing: 2px;
     font-size: 1rem;
@@ -117,8 +118,8 @@ li {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-color: rgb(163, 163, 163);
-    background-blend-mode: overlay;
+    background-color: rgb(88, 88, 88);
+    background-blend-mode: soft-light;
 }
 
 #carousel__slide1 {
@@ -158,7 +159,7 @@ li {
     .carousel__snapper {
         animation-name: tonext, snap;
         animation-timing-function: ease;
-        animation-duration: 5s;
+        animation-duration: 4s;
         animation-iteration-count: infinite;
     }
 
