@@ -44,7 +44,6 @@
 }
 
 * {
-    box-sizing: border-box;
     scrollbar-color: transparent transparent; /* thumb and track color */
     scrollbar-width: 0px;
 }
@@ -108,7 +107,8 @@ li {
     right: 50%;
     transform: translateX(50%);
     bottom: 2.5rem;
-    text-shadow:0.3px 0 0 #000, 0 -0.3px 0 #000, 0 0.3px 0 #000, -0.3px 0 0 #000;
+    text-shadow: 0.3px 0 0 #000, 0 -0.3px 0 #000, 0 0.3px 0 #000,
+        -0.3px 0 0 #000;
 }
 
 .carousel__slide {
@@ -129,12 +129,12 @@ li {
 
 #carousel__slide2 {
     background-image: url("../images/2.jpg");
-    background-position: 0 30%;
+    background-position: 60% 30%;
 }
 
 #carousel__slide3 {
     background-image: url("../images/1.jpg");
-    background-position: 0 20%;
+    background-position: 40% 20%;
 }
 
 .carousel__slide:before {

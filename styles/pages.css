@@ -1,10 +1,14 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     color: rgb(74, 74, 74);
     margin: 0;
 }
 
 main {
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
 }
 
 main h1 {
@@ -28,13 +32,9 @@ h2 {
     padding: 0 3rem;
 }
 
-p {
-    font-family: sans-serif;
-    margin: 0 2rem;
-}
-
-.introductions:not(:last-of-type) {
-    margin-bottom: 3rem;
+.introductions:not(:last-of-type),
+.faq:not(:last-of-type) {
+    margin-bottom: 2rem;
 }
 
 .introductions {
@@ -42,6 +42,34 @@ p {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: flex-start;
+}
+
+.faq {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.faq h2 {
+    width: 90%;
+    padding: 0 1rem;
+    line-height: 28px;
+    text-align: left;
+}
+
+.faq ul {
+    width: 80%;
+    margin-left: 20px;
+    padding-left: 40px;
+}
+
+.faq p {
+    width: 80%;
+    font-family: sans-serif;
+    margin: 0 2rem;
+    font-weight: 300;
+    line-height: 23px;
 }
 
 main ul {
@@ -93,6 +121,10 @@ main a {
     align-items: center;
 }
 
+.contact a {
+    box-sizing: content-box;
+}
+
 #contact__form input,
 #contact__form textarea {
     margin-bottom: 1rem;
@@ -114,7 +146,25 @@ main a {
     padding: 15px 30px;
 }
 
-@media only screen and (min-width: 650px) {
+@media only screen and (min-width: 650px) {    
+    .faq h2 {
+        width: 60%;
+        padding: 0 2rem;
+        /* text-align: center; */
+    }
+    
+    .faq ul {
+        width: 60%;
+        margin-left: 20px;
+        padding-left: 50px;
+    }
+    
+    .faq p {
+        margin: 0 0 0 45px;
+        width: 60%;
+        font-style: italic;
+    }
+
     #contact__form input {
         width: unset;
     }
