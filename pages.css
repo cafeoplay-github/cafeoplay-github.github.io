@@ -1,0 +1,201 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    color: rgb(74, 74, 74);
+    margin: 0;
+}
+
+main {
+    margin-bottom: 2.5rem;
+}
+
+main h1 {
+    text-align: center;
+    font-size: 35px;
+    margin-top: 8rem;
+}
+
+h1,
+h2 {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+    text-transform: capitalize;
+    font-weight: 700;
+    line-height: 49px;
+}
+
+h2 {
+    font-size: 25px;
+    margin: 0 auto 1rem;
+    padding: 0 3rem;
+}
+
+.introductions:not(:last-of-type),
+.faq:not(:last-of-type) {
+    margin-bottom: 2rem;
+}
+
+.introductions {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.faq {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.faq h2 {
+    width: 90%;
+    padding: 0 1rem;
+    line-height: 28px;
+    text-align: left;
+}
+
+.faq ul {
+    width: 80%;
+    margin-left: 20px;
+    padding-left: 40px;
+}
+
+.faq p {
+    width: 80%;
+    font-family: sans-serif;
+    margin: 0 2rem;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 23px;
+}
+
+main ul {
+    position: relative;
+    margin: 0 0 0 20px;
+}
+
+main li,
+main span,
+main a {
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0px 0px 10px;
+    text-decoration: none solid rgb(74, 74, 74);
+    line-height: 26px;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 20px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+#contact__facebook {
+    background: #3b5998;
+}
+
+#contact__instagram {
+    background: #125688;
+}
+
+.contact,
+#contact__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.contact {
+    align-items: center;
+}
+
+.contact a {
+    box-sizing: content-box;
+}
+
+#contact__form input,
+#contact__form textarea {
+    margin-bottom: 1rem;
+    background-color: #e8e8e8;
+    border: 0;
+    padding: 15px 25px;
+    color: #4a4a4ab4;
+    font-family: sans-serif;
+    font-size: 14px;
+    width: 80vw;
+}
+
+#contact__form input:last-of-type {
+    background-color: #7fd2e6;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 2px;
+    width: max-content;
+    padding: 15px 30px;
+}
+
+@media only screen and (min-width: 650px) {
+    .faq h2 {
+        width: 60%;
+        padding: 0 2rem;
+        /* text-align: center; */
+    }
+
+    .faq ul {
+        width: 60%;
+        margin-left: 20px;
+        padding-left: 50px;
+    }
+
+    .faq p {
+        margin: 0 0 0 45px;
+        width: 60%;
+    }
+
+    #contact__form input {
+        width: unset;
+    }
+
+    #contact__form input:nth-of-type(1) {
+        grid-area: name;
+    }
+
+    #contact__form input:nth-of-type(2) {
+        grid-area: email;
+    }
+
+    #contact__form input:nth-of-type(3) {
+        grid-area: phone;
+    }
+
+    #contact__form textarea {
+        grid-area: message;
+    }
+
+    #contact__form input:last-of-type {
+        grid-area: submit;
+    }
+
+    #contact__form {
+        display: grid;
+        grid-template-areas:
+            "name email"
+            "phone phone"
+            "message message"
+            "submit submit";
+        grid-gap: 1rem;
+    }
+}
