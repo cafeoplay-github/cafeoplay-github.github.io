@@ -286,3 +286,13 @@ li {
     opacity: 1;
     transition: ease 0.5s;
 }
+
+@media only screen and (max-height: 490px) {
+    .carousel__viewport {
+        height: 23rem;
+    }
+
+    .slide__image {
+        max-height: 22rem;
+    }
+}
