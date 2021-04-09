@@ -17,13 +17,19 @@ footer {
     letter-spacing: 1px;
     line-height: 19.5px;
     font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+#footer__links a:not(:last-of-type) {
+    margin-right: 1rem;
 }
 
 #footer__links {
-    width: 80%;
+    width: 90%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     margin-bottom: 3rem;
 }
 
