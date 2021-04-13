@@ -2,7 +2,7 @@
 
 /* This is to offset the height of this nav bar.*/
 main {
-    margin-top: 5.5rem;
+    margin-top: 55px;
 }
 
 nav {
@@ -23,7 +23,7 @@ nav a:hover {
 }
 
 nav .logo img {
-    height: 65px;
+    height: 55px;
 }
 
 .nav-mobile {
@@ -104,19 +104,25 @@ nav .logo img {
     top: 65%;
 }
 
+/* This active-page class is given to the corresponding <a> in <nav> in each HTML file.
+The purpose of this is to create an "active" style for the links */
+nav .nav-mobile .active-page {
+    background-color: #faa373d7;
+}
+
 .nav-mobile-list {
     list-style: none;
     position: absolute;
-    top: 62px;
+    top: 52px;
     right: 0rem;
     width: 100vw;
-    height: calc(100vh - 88px);
+    height: calc(100vh - 52px);
     background: rgba(255, 255, 255);
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    padding: 5rem 2rem;
+    padding: 0rem 2rem 2rem;
     transition: transform 0.3s ease;
 }
 
@@ -195,9 +201,10 @@ nav .logo img {
 }
 /* End: animation */
 
-/* This active-page class is given to the corresponding <a> in <nav> in each HTML file.
-The purpose of this is to create an "active" style for the links */
-
-nav .nav-mobile .active-page {
-    background-color: #faa373d7;
+/* Start: media query */
+@media only screen and (min-height: 490px) {
+    .nav-mobile-list {
+        padding-top: 1rem;
+    }
 }
+/* End: media query */
