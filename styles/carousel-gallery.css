@@ -1,39 +1,3 @@
-@keyframes tonext {
-    0% {
-        left: 0;
-    }
-    50% {
-        left: 100%;
-    }
-    100% {
-        left: 0;
-    }
-}
-
-@keyframes tostart {
-    0% {
-        left: 0;
-    }
-    50% {
-        left: -200%;
-    }
-    100% {
-        left: 0;
-    }
-}
-
-@keyframes snap {
-    0% {
-        scroll-snap-align: center;
-    }
-    50% {
-        scroll-snap-align: none;
-    }
-    100% {
-        scroll-snap-align: center;
-    }
-}
-
 * {
     scrollbar-color: transparent transparent; /* thumb and track color */
     scrollbar-width: 0px;
@@ -131,7 +95,6 @@ li {
     left: 0;
     display: flex;
     overflow-x: scroll;
-    scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
 }
 
@@ -158,6 +121,7 @@ li {
 .slide__image {
     max-width: 100%;
     max-height: calc(100vh - 30px);
+    outline: none;
 }
 
 .carousel__slide:before {
@@ -179,29 +143,6 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-@media (hover: hover) {
-    .carousel__snapper {
-        animation-name: tonext, snap;
-        animation-duration: 0.1s;
-    }
-
-    .carousel__slide:last-child .carousel__snapper {
-        animation-name: tostart, snap;
-        animation-duration: 0.1s;
-    }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .carousel__snapper {
-        animation-name: none;
-    }
-
-    .carousel:hover .carousel__snapper,
-    .carousel:focus-within .carousel__snapper {
-        animation-name: none;
-    }
 }
 
 .carousel__navigation {
