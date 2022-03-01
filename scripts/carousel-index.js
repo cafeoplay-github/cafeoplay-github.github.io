@@ -4,7 +4,7 @@ const heroDots = Array.prototype.slice.call(document.getElementById("hero-dots")
 const heroContent = Array.prototype.slice.call(document.getElementById("hero-content").children);
 const heroLeftArrow = document.getElementById("left-arrow");
 const heroRightArrow = document.getElementById("right-arrow");
-var heroSpeed = 4000,
+var heroSpeed = 3000,
     currentSlide = 0,
     currentActive = 0,
     heroTimer,
