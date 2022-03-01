@@ -1,11 +1,11 @@
 footer {
     position: relative;
-    background-color: rgb(74,74,74);
+    background-color: rgb(74, 74, 74);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 3rem;
+    padding: 2rem 3rem;
 }
 
 #footer__links a {
@@ -30,7 +30,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 #footer__media {
