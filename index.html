@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="./styles/navigation.css">
     <link rel="stylesheet" href="../styles/footer.css">
     <script src="./scripts/main.js" defer></script>
+    <script src="./scripts/carousel-index.js" defer></script>
     <!-- Social media icon external library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -57,50 +58,32 @@
             </ul>
         </div>
     </nav>
-
     <main>
-        <section class="carousel" aria-label="Gallery">
-            <ol class="carousel__viewport">
-                <li id="carousel__slide1" tabindex="0" class="carousel__slide">
-                    <div class="carousel__snapper">
-                        <a href="#carousel__slide3" class="carousel__prev">Go to last slide</a>
-                        <span class="carousel__slogan">grab yourself a coffee</span>
-                        <a href="#carousel__slide2" class="carousel__next">Go to next slide</a>
+        <section id="hero" class="hero">
+            <div class="wrap">
+                <span id="right-arrow" class="arrow right fa fa-chevron-right"></span>
+                <span id="left-arrow" class="arrow left fa fa-chevron-left "></span>
+                <ul id="hero-dots" class="dots">
+                    <li class="dot active"></li>
+                    <li class="dot"></li>
+                    <li class="dot"></li>
+                </ul>
+                <div id="hero-content" class="hero-content">
+                    <div class="active hero-pages" id="page1">
+                        <span class="slogan">grab yourself a coffee</span>
                     </div>
-                </li>
-                <li id="carousel__slide2" tabindex="0" class="carousel__slide">
-                    <div class="carousel__snapper">
-                        <a href="#carousel__slide1" class="carousel__prev">Go to previous slide</a>
-                        <span class="carousel__slogan">watch them play</span>
-                        <a href="#carousel__slide3" class="carousel__next">Go to next slide</a>
+                    <div class="hero-pages" id="page2">
+                        <span class="slogan">watch them play</span>
                     </div>
-                </li>
-                <li id="carousel__slide3" tabindex="0" class="carousel__slide">
-                    <div class="carousel__snapper">
-                        <a href="#carousel__slide2" class="carousel__prev">Go to previous slide</a>
-                        <span class="carousel__slogan">and enjoy</span>
-                        <a href="#carousel__slide1" class="carousel__next">Go to first slide</a>
+                    <div class="hero-pages" id="page3">
+                        <span class="slogan">and enjoy</span>
                     </div>
-                </li>
-            </ol>
-            <aside class="carousel__navigation">
-                <ol class="carousel__navigation-list">
-                    <li class="carousel__navigation-item">
-                        <a href="#carousel__slide1" class="carousel__navigation-button">Go to slide 1</a>
-                    </li>
-                    <li class="carousel__navigation-item">
-                        <a href="#carousel__slide2" class="carousel__navigation-button">Go to slide 2</a>
-                    </li>
-                    <li class="carousel__navigation-item">
-                        <a href="#carousel__slide3" class="carousel__navigation-button">Go to slide 3</a>
-                    </li>
-                </ol>
-            </aside>
+                </div>
+            </div>
         </section>
-
         <section id="about">
             <h1>Enjoy the Day at Cafe O' Play</h1>
-            <span>Plan your next playdate at Cafe O’Play and sit, sip and watch them make new friends and explore all of
+            <span>Plan your next playdate at Cafe O'Play and sit, sip and watch them make new friends and explore all of
                 the fun the play area has to offer!</span>
         </section>
 
@@ -109,8 +92,8 @@
                 <img src="./images/3.jpg" alt="a little girl smiling while playing at Cafe O' Play">
                 <div class="card__text">
                     <h2>Relax & Enjoy</h2>
-                    <p>Sit, sip and watch them play at Edmonton’s original indoor playground for little kids, Café
-                        O'Play.<br><br>Café O’Play combines the best of a traditional coffee shop with an indoor
+                    <p>Sit, sip and watch them play at Edmonton's original indoor playground for little kids, Café
+                        O'Play.<br><br>Café O'Play combines the best of a traditional coffee shop with an indoor
                         playground designed
                         for children under 6. Think Starbucks, with a kids menu and play area.
                     </p>
@@ -131,7 +114,7 @@
                 <div class="card__text">
                     <h2>Snacks & More</h2>
                     <p>Serving the best breakfast sandwiches and paninis in Edmonton, as well as a variety of snacks and
-                        finger foods, and only the freshest brewed coffee - Cafe O’Play is a great place to spend your
+                        finger foods, and only the freshest brewed coffee - Cafe O'Play is a great place to spend your
                         morning, afternoon, or early evening.
                     </p>
                 </div>
